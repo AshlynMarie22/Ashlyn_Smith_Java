@@ -31,7 +31,6 @@ public class MagicBallController {
 
     @RequestMapping(value = "/magic", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    @ResponseBody
     public MagicBallAnswer createMagicBallAnswer(@RequestBody String question){
         int randomNum = rand.nextInt(answers.size());
 
