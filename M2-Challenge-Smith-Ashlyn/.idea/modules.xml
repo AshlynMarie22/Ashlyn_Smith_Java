@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/M2-Challenge-Smith-Ashlyn.iml" filepath="$PROJECT_DIR$/.idea/M2-Challenge-Smith-Ashlyn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MagicBallApi/MagicBallApi.iml" filepath="$PROJECT_DIR$/MagicBallApi/MagicBallApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuoteAPI/QuoteAPI.iml" filepath="$PROJECT_DIR$/QuoteAPI/QuoteAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WordApi/WordApi.iml" filepath="$PROJECT_DIR$/WordApi/WordApi.iml" />
+    </modules>
+  </component>
+</project>

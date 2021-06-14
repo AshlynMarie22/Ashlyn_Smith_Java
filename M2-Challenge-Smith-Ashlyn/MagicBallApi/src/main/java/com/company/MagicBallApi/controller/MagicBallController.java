@@ -11,24 +11,16 @@ import java.util.Random;
 
 public class MagicBallController {
 
-//    URI: /magic
-//  - Method: POST
-//  - Request Body: question
-//  - Response Body: Answer
-//- Answer Object instance variables:
-//  - id
-//  - question
-//  - answer
 
-    private static List<String> answers= new ArrayList<>(Arrays.asList(
-            "It is certain",
-            "Without a doubt",
-            "Yes – definitely",
-            "You may rely on it",
-            "Don’t count on it",
-            "Very doubtful",
-            "Reply hazy, try again",
-            "Ask again later"
+    private static List<MagicBallAnswer> answers= new ArrayList<>(Arrays.asList(
+            new MagicBallAnswer( 1, "","It is certain"),
+            new MagicBallAnswer(2, "","Without a doubt"),
+            new MagicBallAnswer(3, "","Yes – definitely"),
+            new MagicBallAnswer(4, "", "You may rely on it"),
+            new MagicBallAnswer( 5, "", "Don’t count on it"),
+            new MagicBallAnswer( 6, "", "Very doubtful"),
+            new MagicBallAnswer(7, "", "Reply hazy, try again"),
+            new MagicBallAnswer(8, "","Ask again later")
 
     ));
 
@@ -39,14 +31,11 @@ public class MagicBallController {
     @RequestMapping(value = "/magic", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
-    public MagicBallAnswer createMagicBallAnswer(@RequestBody MagicBallAnswer answer){
+    public MagicBallAnswer createMagicBallAnswer(@RequestBody String question){
         int randomNum = rand.nextInt(answers.size());
 
-        String randomAnswer = answers.get(randomNum);
-
-        answer.setId(++id);
-        answer.setAnswer(randomAnswer);
-        return answer;
+        answers.get(randomNum).setQuestion(question);
+        return answers.get(randomNum);
 
     }
 
